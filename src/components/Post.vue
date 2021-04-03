@@ -6,11 +6,14 @@
     </div>
 
     <div :class="$style['post-conteudo']">
-      <slot name="conteudo"></slot>
+      <slot></slot>
     </div>
 
     <div :class="$style['post-rodape']">
       <slot name="rodape"></slot>
+      <a href="#" :class="$style.link">
+        <slot name="botao">ler mais</slot>
+      </a>
     </div>
 
   </div>
@@ -32,5 +35,9 @@
 
     .post-rodape {
       font-style: italic;
+    }
+
+    .link {
+      float: right;
     }
 </style>
